@@ -1,7 +1,2 @@
-%h1 Editing person
-
-= render 'form'
-
-= link_to 'Show', @person
-\|
-= link_to 'Back', people_path
+= semantic_form_for @person do |f|
+  = render :partial => 'form', :locals => { :f => f }
