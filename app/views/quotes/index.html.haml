@@ -1,20 +1,2 @@
-%h1 Listing quotes
-
-%table
-  %tr
-    %th Person
-    %th Body
-    %th
-    %th
-    %th
-
-  - @quotes.each do |quote|
-    %tr
-      %td= quote.person
-      %td= quote.body
-      %td= link_to 'Show', quote
-      %td= link_to 'Destroy', quote, :confirm => 'Are you sure?', :method => :delete
-
-%br
-
-= link_to 'New Quote', new_person_quote_path(@person)
+= new_button t("quotes.new.page_title"), new_person_quote_path(@person)
+= render @quotes
