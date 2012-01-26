@@ -14,7 +14,6 @@ describe "quotes/new" do
 
     # Run the generator again with the --webrat flag if you want to use webrat matchers
     assert_select "form", :action => person_quotes_path(@person), :method => "post" do
-      assert_select "input#quote_person", :name => "quote[person]"
       assert_select "textarea#quote_body", :name => "quote[body]"
     end
   end

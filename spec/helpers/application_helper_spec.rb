@@ -13,7 +13,7 @@ require 'spec_helper'
 describe ApplicationHelper do
   describe "page title" do
     it "returns the translated page title" do
-      helper.page_title("people", "index").should == "Listing People"
+      helper.page_title(nil, "people", "index").should == "Listing People"
     end
   end
 
