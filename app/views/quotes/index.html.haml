@@ -1,3 +1,3 @@
 - page_title @person.name
-= new_button t("quotes.new.page_title"), new_person_quote_path(@person)
+= new_button t("quotes.new.page_title", :value => @person.name), new_person_quote_path(@person)
 = render @quotes
