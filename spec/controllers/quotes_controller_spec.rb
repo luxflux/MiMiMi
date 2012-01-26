@@ -84,8 +84,8 @@ describe QuotesController do
       end
 
       it "redirects to the created quote" do
-        post :create, {:quote => valid_attributes}, valid_session
-        response.should redirect_to(Quote.last)
+        post :create, {:quote => valid_attributes, :person_id => Person.last.id }, valid_session
+        response.should redirect_to(person_quotes_path(Person.last))
       end
     end
 
@@ -99,7 +99,6 @@ describe QuotesController do
 
       it "re-renders the 'new' template" do
         # Trigger the behavior that occurs when invalid params are submitted
-        Quote.any_instance.stub(:save).and_return(false)
         post :create, {:quote => {}}, valid_session
         response.should render_template("new")
       end
@@ -143,8 +142,7 @@ describe QuotesController do
       it "re-renders the 'edit' template" do
         quote = Quote.create! valid_attributes
         # Trigger the behavior that occurs when invalid params are submitted
-        Quote.any_instance.stub(:save).and_return(false)
-        put :update, {:id => quote.to_param, :quote => {}}, valid_session
+        put :update, {:id => quote.to_param, :quote => { :body => ''}, :person_id => Person.last.id}, valid_session
         response.should render_template("edit")
       end
     end
