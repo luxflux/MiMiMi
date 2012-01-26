@@ -8,9 +8,9 @@ module ApplicationHelper
     t("#{kontroller}.#{aktion}.tagline", :default => "")
   end
 
-  def bootstrap_button(content, path, klass, small = false, *args)
+  def bootstrap_button(content, path, klass, *args)
     options = args.extract_options!
-    small = small ? "" : "small "
+    small = options.delete(:small) ? "small " : ""
     options[:class] = "btn #{small}#{klass}"
     link_to content, path, options
   end
