@@ -20,11 +20,15 @@ require 'spec_helper'
 
 describe QuotesController do
 
+  before do
+    FactoryGirl.create(:person)
+  end
+
   # This should return the minimal set of attributes required to create a valid
   # Quote. As you add validations to Quote, be sure to
   # update the return value of this method accordingly.
   def valid_attributes
-    {}
+    { :body => "He did something!", :person_id => Person.last.id }
   end
 
   # This should return the minimal set of values that should be in the session
