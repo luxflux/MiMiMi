@@ -14,3 +14,7 @@ en:
   quotes:
     index:
       page_title: "%{value}'s MiMiMis"
+    new:
+      page_title: "Add a new MiMiMi of %{value}"
+    create:
+      page_title: :"quotes.new.page_title"
