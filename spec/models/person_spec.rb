@@ -1,5 +1,19 @@
 require 'spec_helper'
 
 describe Person do
-  pending "add some examples to (or delete) #{__FILE__}"
+  context "on creation" do
+    context "with invalid attributes" do
+
+      before do
+        @person = Person.create
+      end
+
+      subject do
+        @person
+      end
+
+      it { should have(1).error_on(:name) }
+
+    end
+  end
 end
