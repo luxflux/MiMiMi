@@ -13,4 +13,4 @@ en:
 
   quotes:
     index:
-      page_title: "{{value}}'s MiMiMis"
+      page_title: "%{value}'s MiMiMis"
