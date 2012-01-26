@@ -22,17 +22,14 @@ gem 'html5-rails', :git => "https://github.com/luxflux/html5-rails.git", :branch
 gem "friendly_id", "~> 4.0.0"
 gem 'formtastic'
 
-group :test do
+group :development do
   gem 'sqlite3'
-  gem 'rspec-rails'
   gem 'spork', '~> 0.9.0.rc'
   gem 'factory_girl_rails'
   gem 'watchr'
   gem 'rspec-rails-mocha'
   gem 'capybara'
   gem 'simplecov', '>=0.3.8', :require => false
-end
-
-group :development do
   gem 'wirble'
+  gem 'rspec-rails'
 end
