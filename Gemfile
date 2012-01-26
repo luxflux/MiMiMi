@@ -10,17 +10,15 @@ group :assets do
   gem 'sass-rails'
   gem 'coffee-rails'
   gem 'uglifier'
-  gem 'compass', '0.12.alpha.4'
-  gem 'compass-h5bp'
   gem 'therubyracer'
+  gem 'bootstrap-sass'
 end
 
 gem 'haml-rails'
-
 gem 'jquery-rails'
-gem 'html5-rails', :git => "https://github.com/luxflux/html5-rails.git", :branch => "patch-1"
 gem "friendly_id", "~> 4.0.0"
 gem 'formtastic'
+gem 'formtastic-bootstrap'
 
 group :development do
   gem 'sqlite3'
