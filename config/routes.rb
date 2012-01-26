@@ -1,6 +1,6 @@
 MiMiMi::Application.routes.draw do
 
-  resources :people do
+  resources :people, :except => [ :edit, :update ] do
     resources :quotes, :except => [ :edit, :update ], :shallow => true
   end
 
