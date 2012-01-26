@@ -10,3 +10,7 @@ en:
     create:
       page_title: :"people.new.page_title"
       tagline: "There were errors!"
+
+  quotes:
+    index:
+      page_title: "{{value}}'s MiMiMis"
