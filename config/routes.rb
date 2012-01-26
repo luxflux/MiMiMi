@@ -1,4 +1,6 @@
 MiMiMi::Application.routes.draw do
+  resources :quotes
+
   resources :people
 
   # The priority is based upon order of creation:
