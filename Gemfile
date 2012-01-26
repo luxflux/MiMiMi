@@ -12,9 +12,10 @@ group :assets do
   gem 'uglifier'
   gem 'compass', '0.12.alpha.4'
   gem 'compass-h5bp'
+  gem 'therubyracer'
 end
 
 gem 'haml-rails'
 
 gem 'jquery-rails'
-gem 'html5-rails'
+gem 'html5-rails', :git => "https://github.com/luxflux/html5-rails.git", :branch => "patch-1"
