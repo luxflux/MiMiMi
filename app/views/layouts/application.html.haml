@@ -1,7 +1,7 @@
 !!! 5
 %html
   %head
-    %title MiMiMi
+    %title= page_title
     = stylesheet_link_tag "application"
     = javascript_include_tag "application"
     = csrf_meta_tags
@@ -15,7 +15,7 @@
         .well
           .page-header
             %h1
-              MiMiMi
+              = page_title
               %small= t(".tagline")
         .well
           .row
