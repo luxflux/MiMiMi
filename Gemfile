@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 gem 'rails', '3.2.0'
 gem 'sqlite3'
+gem 'pg'
 
 
 # Gems used only for assets and not required
@@ -32,4 +33,8 @@ group :development do
   gem 'simplecov', '>=0.3.8', :require => false
   gem 'wirble'
   gem 'rspec-rails'
+  gem 'capistrano'
+  gem 'capistrano-ext'
+  gem 'capistrano_colors'
+  gem 'versionomy'
 end
