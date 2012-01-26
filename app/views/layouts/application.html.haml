@@ -10,6 +10,8 @@
       .fill
         .container
           = link_to "MiMiMi", root_url, :class => "brand"
+          %ul.nav
+            %li= link_to t("people.index.page_title"), people_path
     .container
       .content
         .well
