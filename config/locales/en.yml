@@ -5,3 +5,8 @@ en:
   people:
     index:
       page_title: "Listing People"
+    new:
+      page_title: "Add a person"
+    create:
+      page_title: :"people.new.page_title"
+      tagline: "There were errors!"

@@ -16,4 +16,13 @@ describe ApplicationHelper do
       helper.page_title("people", "index").should == "Listing People"
     end
   end
+
+  describe "page tagline" do
+    it "returns the page tagline if it exists" do
+      helper.tagline("people", "create").should == "There were errors!"
+    end
+    it "returns nothing if there is no tagline specified" do
+      helper.tagline("people", "new").should == ""
+    end
+  end
 end
