@@ -15,7 +15,7 @@ module ApplicationHelper
     link_to content, path, options
   end
 
-  def edit_button(content, path)
+  def new_button(content, path)
     bootstrap_button content, path, :primary
   end
 

@@ -28,7 +28,7 @@ describe ApplicationHelper do
 
   describe "button creator" do
     it "returns a button to the new form" do
-      helper.edit_button("New", "/").should have_css("a.primary", :text => "New")
+      helper.new_button("New", "/").should have_css("a.primary", :text => "New")
     end
   end
 end
