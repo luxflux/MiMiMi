@@ -19,6 +19,8 @@ gem 'jquery-rails'
 gem "friendly_id", "~> 4.0.0"
 gem 'formtastic'
 gem 'formtastic-bootstrap'
+gem 'devise'
+gem 'cancan'
 
 group :development do
   gem 'sqlite3'
