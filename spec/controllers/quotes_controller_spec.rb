@@ -26,7 +26,7 @@ describe QuotesController do
   def valid_attributes
     {}
   end
-  
+
   # This should return the minimal set of values that should be in the session
   # in order to pass any filters (e.g. authentication) defined in
   # QuotesController. Be sure to keep this updated too.
@@ -157,7 +157,7 @@ describe QuotesController do
     it "redirects to the quotes list" do
       quote = Quote.create! valid_attributes
       delete :destroy, {:id => quote.to_param}, valid_session
-      response.should redirect_to(quotes_url)
+      response.should redirect_to(person_quotes_url(@person))
     end
   end
 

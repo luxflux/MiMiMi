@@ -13,9 +13,8 @@
       %td= quote.person
       %td= quote.body
       %td= link_to 'Show', quote
-      %td= link_to 'Edit', edit_quote_path(quote)
       %td= link_to 'Destroy', quote, :confirm => 'Are you sure?', :method => :delete
 
 %br
 
-= link_to 'New Quote', new_quote_path
+= link_to 'New Quote', new_person_quote_path(@person)
