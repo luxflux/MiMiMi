@@ -1,4 +1,8 @@
 class QuotesController < ApplicationController
+
+  load_and_authorize_resource :person
+  load_and_authorize_resource :through => :person, :shallow => true
+
   # GET /quotes
   # GET /quotes.json
   def index
