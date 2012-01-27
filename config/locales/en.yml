@@ -6,7 +6,7 @@ en:
     index:
       page_title: "Listing People"
     new:
-      page_title: "Add a person"
+      page_title: "Add another person"
     create:
       page_title: :"people.new.page_title"
       tagline: "There were errors!"
