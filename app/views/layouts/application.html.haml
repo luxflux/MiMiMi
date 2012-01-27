@@ -12,14 +12,19 @@
         .container
           = link_to "MiMiMi", root_url, :class => "brand"
           %ul.nav
-            %li= link_to t("people.index.page_title"), people_path
+            = nav_entry t("people.index.page_title"), people_path
     .container
       .content
-        .well
-          .page-header
-            %h1
-              = render_title
-              %small= tagline
+        .row
+          .span-two-thirds
+            .well
+              .page-header
+                %h1
+                  = render_title
+                  %small= tagline
+          .span-one-third
+            .well
+              = render "actions"
         .well
           .row
             .span16= yield

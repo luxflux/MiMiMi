@@ -1,3 +1,0 @@
-%h2
-  = link_to person.name, person_quotes_path(person)
-  %small= (person.quotes.order(:id).last.body rescue "")

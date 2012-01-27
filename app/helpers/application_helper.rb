@@ -24,4 +24,9 @@ module ApplicationHelper
     bootstrap_button content, path, :primary
   end
 
+  def nav_entry(content, path)
+    content_tag(:li, :class => (current_page?(path) ? "active" : "")) do
+      link_to content, path
+    end
+  end
 end
