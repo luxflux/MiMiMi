@@ -1,3 +1,6 @@
-= new_button t("people.new.page_title"), new_person_path
-
-= render @people
+- @people.in_groups_of(4, false) do |people_group|
+  .row
+    - people_group.each do |person|
+      .span4
+        %h2= link_to person.name, person_quotes_path(person)
+        %p= truncate((person.quotes.order(:id).last.body rescue ""), :length => 20, :separator => ' ')
