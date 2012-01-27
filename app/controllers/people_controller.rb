@@ -31,7 +31,7 @@ class PeopleController < ApplicationController
   # POST /people.json
   def create
     @person.save
-    respond_with(@person, :location => persons_path)
+    respond_with(@person, :location => people_path)
   end
 
   # PUT /people/1
