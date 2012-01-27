@@ -1,7 +1,6 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.0'
-gem 'sqlite3'
 gem 'pg'
 
 
@@ -11,7 +10,6 @@ group :assets do
   gem 'sass-rails'
   gem 'coffee-rails'
   gem 'uglifier'
-  gem 'therubyracer'
   gem 'bootstrap-sass'
 end
 
@@ -37,4 +35,5 @@ group :development do
   gem 'capistrano-ext'
   gem 'capistrano_colors'
   gem 'versionomy'
+  gem 'therubyracer'
 end
