@@ -1,7 +1,6 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.0'
-gem 'pg'
 
 
 # Gems used only for assets and not required
@@ -13,14 +12,20 @@ group :assets do
   gem 'bootstrap-sass'
 end
 
-gem 'haml-rails'
-gem 'jquery-rails'
-gem "friendly_id", "~> 4.0.0"
-gem 'formtastic'
-gem 'formtastic-bootstrap'
-gem 'devise'
-gem 'cancan'
-gem 'unicorn'
+group :production do
+  gem 'pg'
+end
+
+group :development, :production do
+  gem 'haml-rails'
+  gem 'jquery-rails'
+  gem "friendly_id", "~> 4.0.0"
+  gem 'formtastic'
+  gem 'formtastic-bootstrap'
+  gem 'devise'
+  gem 'cancan'
+  gem 'unicorn'
+end
 
 group :development do
   gem 'sqlite3'
