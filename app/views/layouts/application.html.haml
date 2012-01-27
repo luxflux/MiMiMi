@@ -22,4 +22,15 @@
         .well
           .row
             .span16= yield
-      %footer MiMiMi Project
+      %footer
+        MiMiMi Project
+        :javascript
+          var pkBaseURL = (("https:" == document.location.protocol) ? "https://piwik.yux.ch/" : "http://piwik.yux.ch/");
+          document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
+          try {
+            var piwikTracker = Piwik.getTracker(pkBaseURL + "piwik.php", 1);
+            piwikTracker.trackPageView();
+            piwikTracker.enableLinkTracking();
+          } catch( err ) {}
+        %noscript
+          %img{:src => "http://piwik.yux.ch/piwik.php?idsite=1"}
