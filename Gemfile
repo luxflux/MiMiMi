@@ -20,6 +20,7 @@ gem 'formtastic'
 gem 'formtastic-bootstrap'
 gem 'devise'
 gem 'cancan'
+gem 'unicorn'
 
 group :development do
   gem 'sqlite3'
