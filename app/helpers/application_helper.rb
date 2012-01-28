@@ -24,6 +24,14 @@ module ApplicationHelper
     bootstrap_button content, path, :primary
   end
 
+  def delete_to_modal(content, model)
+    bootstrap_button content, '#', "danger delete_#{model.class.to_s}", "data-id" => model.id, "data-controls-modal" => "delete-confirm-#{model.id}"
+  end
+
+  def delete_button(content, path)
+    bootstrap_button content, path, :danger, :method => :delete
+  end
+
   def nav_entry(content, path)
     content_tag(:li, :class => (current_page?(path) ? "active" : "")) do
       link_to content, path

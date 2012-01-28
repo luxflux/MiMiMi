@@ -7,4 +7,8 @@ class Person < ActiveRecord::Base
 
   extend FriendlyId
   friendly_id :name, :use => [ :slugged, :i18n ]
+
+  def title_value
+    self.name
+  end
 end

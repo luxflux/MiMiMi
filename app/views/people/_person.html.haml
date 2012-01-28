@@ -1,0 +1,2 @@
+%h2= link_to person.name, person_quotes_path(person)
+%p= truncate((person.quotes.order(:id).last.body rescue ""), :length => 40, :separator => ' ')

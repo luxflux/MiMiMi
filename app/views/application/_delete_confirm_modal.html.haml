@@ -1,0 +1,12 @@
+%div{:id => "delete-confirm-#{delete_confirm_modal.id}", :class => "modal hide fade"}
+  .modal-header
+    %h3= t(".title", :value => delete_confirm_modal.title_value)
+  .modal-body
+    %p= t(".text", :value => delete_confirm_modal.title_value, :model => delete_confirm_modal.class.model_name.human)
+  .modal-footer
+    = link_to t(".ok"), delete_confirm_modal, :method => :delete, :class => "btn primary"
+    = link_to t(".stop"), "#", :class => "btn secondary closeModal"
+    :javascript
+      $('#delete-confirm-#{delete_confirm_modal.id} a.closeModal').live('click', function() {
+        $('#delete-confirm-#{delete_confirm_modal.id}').modal('hide');
+      });
