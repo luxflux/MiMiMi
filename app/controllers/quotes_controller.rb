@@ -8,6 +8,7 @@ class QuotesController < ApplicationController
   # GET /quotes
   # GET /quotes.json
   def index
+    @quotes = @quotes.order("created_at DESC")
     respond_with(@quotes)
   end
 
