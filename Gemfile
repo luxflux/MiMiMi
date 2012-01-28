@@ -25,6 +25,8 @@ group :development, :production, :test do
   gem 'devise'
   gem 'cancan'
   gem 'unicorn'
+  gem 'tweethose', :git => "https://github.com/luxflux/TweetHose.git", :branch => "patch-1"
+  gem 'yajl-ruby', :require => 'yajl'
 end
 
 group :development do
