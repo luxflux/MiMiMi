@@ -1,3 +1,6 @@
-%blockquote
-  %p= quote.body
-  %small= @person.name
+.span16
+  .well
+    %blockquote
+      %p= quote.body
+      %small
+        = "#{@person.name}, #{l(quote.created_at, :format => :short)}"

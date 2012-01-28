@@ -1,3 +1,4 @@
 - page_title @person.name
-= semantic_form_for [ @person, @quote ] do |f|
-  = render :partial => 'form', :locals => { :f => f }
+.well
+  = semantic_form_for [ @person, @quote ] do |f|
+    = render :partial => 'form', :locals => { :f => f }
