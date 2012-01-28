@@ -2,4 +2,5 @@
   .well
     %blockquote
       %p= quote.body
-      %small= @person.name
+      %small
+        = "#{@person.name}, #{l(quote.created_at, :format => :short)}"
