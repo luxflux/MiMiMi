@@ -4,4 +4,7 @@ class ApplicationController < ActionController::Base
   def current_user
   end
 
+  # use our cool flash responder
+  self.responder = FlashResponder
+
 end

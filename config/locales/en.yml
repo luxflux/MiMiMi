@@ -10,6 +10,8 @@ en:
     create:
       page_title: :"people.new.page_title"
       tagline: "There were errors!"
+    destroy:
+      page_title: "Remove person"
 
   quotes:
     index:
@@ -18,3 +20,19 @@ en:
       page_title: "Add a new MiMiMi of %{value}"
     create:
       page_title: :"quotes.new.page_title"
+
+  application:
+    delete_confirm_modal:
+      title: "Confirm deletion"
+      text: "Do you really want to delete %{model} %{value}?"
+      ok: "Do it!"
+      stop: "Na, I don't want"
+
+  flash:
+    actions:
+      create:
+        error: "There were errors!"
+        success: "Created successfully"
+      destroy:
+        error: "There was an error during removal!"
+        success: "Removed successfully"

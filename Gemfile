@@ -16,7 +16,7 @@ group :production do
   gem 'pg'
 end
 
-group :development, :production do
+group :development, :production, :test do
   gem 'haml-rails'
   gem 'jquery-rails'
   gem "friendly_id", "~> 4.0.0"

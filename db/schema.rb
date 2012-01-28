@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120126193358) do
+ActiveRecord::Schema.define(:version => 20120127235435) do
 
   create_table "friendly_id_slugs", :force => true do |t|
     t.string   "slug",                         :null => false
@@ -26,9 +26,12 @@ ActiveRecord::Schema.define(:version => 20120126193358) do
 
   create_table "people", :force => true do |t|
     t.string   "name"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",                 :null => false
+    t.datetime "updated_at",                 :null => false
+    t.string   "slug",       :default => "", :null => false
   end
+
+  add_index "people", ["slug"], :name => "index_people_on_slug", :unique => true
 
   create_table "quotes", :force => true do |t|
     t.integer  "person_id"
