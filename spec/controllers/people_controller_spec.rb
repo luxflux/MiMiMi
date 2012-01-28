@@ -81,21 +81,19 @@ describe PeopleController do
 
       it "redirects to the created person" do
         post :create, {:person => valid_attributes}, valid_session
-        response.should redirect_to(Person.last)
+        response.should redirect_to(people_path)
       end
     end
 
     describe "with invalid params" do
       it "assigns a newly created but unsaved person as @person" do
         # Trigger the behavior that occurs when invalid params are submitted
-        Person.any_instance.stub(:save).and_return(false)
         post :create, {:person => {}}, valid_session
         assigns(:person).should be_a_new(Person)
       end
 
       it "re-renders the 'new' template" do
         # Trigger the behavior that occurs when invalid params are submitted
-        Person.any_instance.stub(:save).and_return(false)
         post :create, {:person => {}}, valid_session
         response.should render_template("new")
       end
@@ -131,7 +129,6 @@ describe PeopleController do
       it "assigns the person as @person" do
         person = Person.create! valid_attributes
         # Trigger the behavior that occurs when invalid params are submitted
-        Person.any_instance.stub(:save).and_return(false)
         put :update, {:id => person.to_param, :person => {}}, valid_session
         assigns(:person).should eq(person)
       end
@@ -139,8 +136,7 @@ describe PeopleController do
       it "re-renders the 'edit' template" do
         person = Person.create! valid_attributes
         # Trigger the behavior that occurs when invalid params are submitted
-        Person.any_instance.stub(:save).and_return(false)
-        put :update, {:id => person.to_param, :person => {}}, valid_session
+        put :update, {:id => person.to_param, :person => {:name => ''}}, valid_session
         response.should render_template("edit")
       end
     end

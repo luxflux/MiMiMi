@@ -12,7 +12,7 @@ describe "people/index" do
   it "renders a list of people" do
     render
     # Run the generator again with the --webrat flag if you want to use webrat matchers
-    assert_select "h2>a", :text => /MyName \d/, :count => 2
-    assert_select "h2>small", :text => "He did something!", :count => 1
+    assert_select "div.span4>h2>a", :text => /MyName \d/, :count => 2
+    assert_select "div.span4>p", :text => "He did something!", :count => 1
   end
 end

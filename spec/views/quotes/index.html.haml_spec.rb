@@ -16,6 +16,6 @@ describe "quotes/index" do
   it "renders a list of quotes" do
     render
     # Run the generator again with the --webrat flag if you want to use webrat matchers
-    assert_select "p.quote", :text => "MyText".to_s, :count => 2
+    assert_select "blockquote>p", :text => "MyText".to_s, :count => 2
   end
 end
