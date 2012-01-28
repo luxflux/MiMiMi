@@ -1,2 +1,2 @@
 web: bundle exec unicorn -p $PORT
-web: ./script/tweethose_ctl start -t
+worker: ./script/tweethose_ctl start -t
