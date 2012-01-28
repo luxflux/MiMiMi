@@ -6,7 +6,7 @@ ENV["RAILS_ENV"] ||= "development"
 require File.dirname(__FILE__) + "/../config/application"
 Rails.application.require_environment!
 
-Rails.logger.auto_flushing = true
+#Rails.logger.auto_flushing = true
 
 require 'rubygems'
 require 'tweethose'
